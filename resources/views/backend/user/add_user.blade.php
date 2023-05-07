@@ -21,10 +21,10 @@
                                                 <div class="form-group">
                                                     <h5>User Role <span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <select name="usertype" id="select" class="form-control">
+                                                        <select name="role" id="select" class="form-control">
                                                             <option value="" selected="" disabled="">Select User Role</option>
                                                             <option value="Admin">Admin</option>
-                                                            <option value="User">User</option>
+                                                            <option value="Operator">Operator</option>
                                                         </select>
                                                     </div>
                                                     @error('usertype')
@@ -57,15 +57,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <h5>User Password <span class="text-danger">*</span></h5>
-                                                    <div class="controls">
-                                                        <input type="password" name="password" class="form-control">
-                                                    </div>
-                                                    @error('password')
-                                                    <span class="text-danger m-1">{{$message}}</span>
-                                                    @enderror
-                                                </div>
+
                                             </div>
                                         </div>
                                     </div>

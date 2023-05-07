@@ -70,8 +70,8 @@
                                                     <div class="controls">
                                                         <select value="{{$user->gender}}" name="gender" id="select" class="form-control">
                                                             <option value="" selected="" disabled="">Select User Role</option>
-                                                            <option value="Male" {{$user->usertype == 'Male' ? 'selected' : "" }}>Male</option>
-                                                            <option value="Female" {{$user->usertype == 'Female' ? 'selected' : "" }}>Female</option>
+                                                            <option value="Male" {{$user->gender == 'Male' ? 'selected' : "" }}>Male</option>
+                                                            <option value="Female" {{$user->gender == 'Female' ? 'selected' : "" }}>Female</option>
                                                         </select>
                                                     </div>
                                                     @error('gender')

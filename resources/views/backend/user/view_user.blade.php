@@ -1,7 +1,5 @@
 @extends('admin.admin_master')
 @section('admin')
-
-
 <div class="content-wrapper">
     <div class="container-full">
         <section class="content">
@@ -21,6 +19,7 @@
                                             <th>Role</th>
                                             <th>Name</th>
                                             <th>Email</th>
+                                            <th>Code</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -28,9 +27,10 @@
                                         @foreach($allUsers as $key => $user)
                                         <tr>
                                             <td width="5%">{{$key+1}}</td>
-                                            <td>{{$user->usertype}}</td>
+                                            <td>{{$user->role}}</td>
                                             <td>{{$user->name}}</td>
                                             <td>{{$user->email}}</td>
+                                            <td>{{$user->code}}</td>
                                             <td width="25%">
                                                 <a href="{{route('edit.user',$user->id)}}" class="btn btn-info">Edit</a>
                                                 <a href="{{route('delete.user',$user->id)}}" class="btn btn-danger" id="delete">Delete</a>
@@ -44,6 +44,7 @@
                                             <th>Role</th>
                                             <th>Name</th>
                                             <th>Email</th>
+                                            <th>Code</th>
                                             <th>Action</th>
                                         </tr>
                                     </tfoot>
@@ -57,6 +58,4 @@
         </section>
     </div>
 </div>
-
-
 @endsection

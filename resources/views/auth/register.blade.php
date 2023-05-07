@@ -33,6 +33,9 @@
                             <p class="text-white-50">Register a new membership</p>
                         </div>
                         <div class="p-30 rounded30 box-shadowed b-2 b-dashed">
+                            @error('password')
+                            <span class="text-danger m-1">{{$message}}</span>
+                            @enderror
                             <form method="POST" action="{{ route('register') }}">
                                 @csrf
                                 <div class="form-group">

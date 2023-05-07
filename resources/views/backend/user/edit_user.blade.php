@@ -21,13 +21,13 @@
                                                 <div class="form-group">
                                                     <h5>User Role <span class="text-danger">*</span></h5>
                                                     <div class="controls">
-                                                        <select value="{{$user->usertype}}" name="usertype" id="select" class="form-control">
-                                                            <option value="" selected="" disabled="">Select User Role</option>
-                                                            <option value="Admin" {{$user->usertype == 'Admin' ? 'selected' : "" }}>Admin</option>
-                                                            <option value="User" {{$user->usertype == 'User' ? 'selected' : "" }}>User</option>
+                                                        <select value="{{$user->role}}" name="role" id="select" class="form-control">
+                                                            <option value=""selected="" disabled="">Select User Role</option>
+                                                            <option value="Admin" {{$user->role == 'Admin' ? 'selected' : "" }}>Admin</option>
+                                                            <option value="Operator" {{$user->role == 'Operator' ? 'selected' : "" }}>Operator</option>
                                                         </select>
                                                     </div>
-                                                    @error('usertype')
+                                                    @error('role')
                                                     <span class="text-danger m-1">{{$message}}</span>
                                                     @enderror
                                                 </div>
